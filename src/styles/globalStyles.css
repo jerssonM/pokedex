@@ -1,0 +1,79 @@
+:root {
+  --inactive-text-color: #bfbfbf;
+  --box-shadow: rgba(0, 0, 0, 0.4);
+  --desktop-breakpoint: 1024px;
+}
+
+html,
+body {
+  width: 100vw;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+}
+
+#app {
+  height: stretch;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+.bg-primary {
+  background-color: #f22539;
+}
+
+.bg-card {
+  background-color: #ffffff;
+}
+
+.bg-inactive {
+  background-color: #bfbfbf;
+}
+
+.color-primary {
+  color: #353535;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.subtitle {
+  font-size: 26px;
+}
+
+.paragraph {
+  font-size: 18px;
+}
+
+.paragraph-large {
+  font-size: 22px;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.full-width {
+  width: stretch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
