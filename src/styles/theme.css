@@ -1,0 +1,62 @@
+:root {
+  --inactive-text-color: #bfbfbf;
+  --box-shadow: rgba(0, 0, 0, 0.4);
+  --desktop-breakpoint: 1024px;
+  --border-list: #e8e8e8;
+}
+
+.bg-primary {
+  background-color: #f22539;
+}
+
+.bg-card {
+  background-color: #ffffff;
+}
+
+.bg-inactive {
+  background-color: #bfbfbf;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.color-primary {
+  color: #353535;
+}
+
+.color-secondary {
+  color: #5e5e5e;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.subtitle {
+  font-size: 26px;
+}
+
+.paragraph {
+  font-size: 18px;
+}
+
+.paragraph-large {
+  font-size: 22px;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.full-width {
+  width: stretch;
+}

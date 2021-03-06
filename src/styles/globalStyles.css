@@ -1,9 +1,3 @@
-:root {
-  --inactive-text-color: #bfbfbf;
-  --box-shadow: rgba(0, 0, 0, 0.4);
-  --desktop-breakpoint: 1024px;
-}
-
 html,
 body {
   width: 100vw;
@@ -20,47 +14,6 @@ body {
 * {
   font-family: "Lato", sans-serif;
 }
-
-.bg-primary {
-  background-color: #f22539;
-}
-
-.bg-card {
-  background-color: #ffffff;
-}
-
-.bg-inactive {
-  background-color: #bfbfbf;
-}
-
-.color-primary {
-  color: #353535;
-}
-
-.title {
-  font-size: 36px;
-}
-
-.subtitle {
-  font-size: 26px;
-}
-
-.paragraph {
-  font-size: 18px;
-}
-
-.paragraph-large {
-  font-size: 22px;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
-}
-
-.full-width {
-  width: stretch;
-}
-
 h1,
 h2,
 h3,
@@ -76,4 +29,17 @@ ol,
 li {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -8,16 +8,13 @@
 <script>
 export default {
   name: "FabButtonStar",
-  props: { onClick: { type: Function, default: () => {} } },
-  data() {
-    return {
-      isSelected: false,
-    };
+  props: {
+    onClick: { type: Function, default: () => {} },
+    isSelected: { type: Boolean, default: false },
   },
   methods: {
     onClickButton(e) {
-      this.isSelected = !this.isSelected;
-      this.onClick(this.isSelected, e);
+      this.onClick(!this.isSelected, e);
     },
   },
 };

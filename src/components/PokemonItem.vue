@@ -1,7 +1,7 @@
 <template>
-  <li class="pokemon-card-item bg-card" v-on:click="onClick">
-    <p class="paragraph-large text-capitalize"><slot /></p>
-    <FabButtonStar :onClick="onClickStar" />
+  <li class="pokemon-item bg-card" v-on:click="onClick">
+    <p class="paragraph-large text-capitalize color-primary"><slot /></p>
+    <FabButtonStar :onClick="onClickStar" :isSelected="isSelectedStar" />
   </li>
 </template>
 
@@ -9,17 +9,18 @@
 import FabButtonStar from "../components/FabButtonStar";
 
 export default {
-  name: "PokemonCardItem",
+  name: "PokemonItem",
   components: { FabButtonStar },
   props: {
     onClickStar: { type: Function, default: () => {} },
     onClick: { type: Function, default: () => {} },
+    isSelectedStar: { type: Boolean, default: () => false },
   },
 };
 </script>
 
 <style scoped>
-.pokemon-card-item {
+.pokemon-item {
   display: flex;
   padding: 18px 20px;
   align-items: center;
@@ -28,7 +29,7 @@ export default {
   margin-bottom: 10px;
   width: stretch;
 }
-.pokemon-card-item:hover {
+.pokemon-item:hover {
   cursor: pointer;
 }
 </style>

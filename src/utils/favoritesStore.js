@@ -7,6 +7,7 @@ export const addToStore = (pokemon) => {
     favorites.push(pokemon);
   }
   localStorage.setItem("favorites", JSON.stringify(favorites));
+  return favorites;
 };
 
 export const getStore = () => {

@@ -1,8 +1,8 @@
 <template>
   <div class="bottom-bar bg-card">
-    <div class="bottom-bar-buttons-container full-width">
+    <div class="bottom-bar-buttons-container">
       <Button
-        fullWidth="true"
+        fullWidth
         :onClick="onClickButton"
         :color="showAll ? 'primary' : 'inactive'"
       >
@@ -14,7 +14,7 @@
         All</Button
       >
       <Button
-        fullWidth="true"
+        fullWidth
         :onClick="onClickButton"
         :color="showAll ? 'inactive' : 'primary'"
       >
@@ -31,7 +31,9 @@
 
 <script>
 import Button from "./Button";
+
 export default {
+  name: "BottomBar",
   data() {
     return {
       showAll: true,
@@ -48,7 +50,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .bottom-bar {
   display: flex;
   justify-content: center;
@@ -62,6 +64,7 @@ export default {
   display: flex;
   align-items: center;
   padding: 0 30px;
+  width: stretch;
 }
 .bottom-bar-buttons-container button:first-of-type {
   margin-right: 15px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-screen">
+  <div class="loading-screen full-width bg-card">
     <img src="/img/loader.svg" class="loading-screen-loader" />
   </div>
 </template>
@@ -11,22 +11,17 @@ export default {
 </script>
 
 <style scoped>
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .loading-screen {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .loading-screen-loader {
   width: 106px;
-  animation: rotate 8s infinite linear;
+  animation: rotate 3s infinite linear;
 }
 </style>
