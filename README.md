@@ -1,4 +1,4 @@
-# Global 66 - Prueba tecnica
+# Global 66 - Prueba técnica
 
 > Desarrollado por Jersson Morales | [LinkedIn](https://www.linkedin.com/in/jersson-stiven-morales-alza-022115183/)
 
