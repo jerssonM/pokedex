@@ -95,9 +95,10 @@ export default {
   display: flex;
   flex-direction: column;
   width: calc(100% - 60px);
-  height: 60%;
+  height: 85%;
   margin: 0 auto;
   border-radius: 5px;
+  overflow-y: auto;
 }
 .pokemon-card-image-container {
   background-image: url("/img/img-background.png");
@@ -134,7 +135,11 @@ export default {
 }
 .pokemon-card-buttons-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+.pokemon-card-buttons-container button {
+  margin-right: 10px;
 }
 @media (min-width: 1024px) {
   .pokemon-card {
