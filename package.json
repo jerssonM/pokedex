@@ -38,13 +38,13 @@
     "last 2 versions",
     "not dead"
   ],
-    "husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "src/**/*.{js, jsx}": [
       "yarn test:unit --findRelatedTests",
       "yarn lint",
       "git add ."

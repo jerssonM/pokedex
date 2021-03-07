@@ -23,7 +23,7 @@ export default {
 
 <style scoped>
 .home-screen {
-  height: 100%;
+  height: stretch;
   display: flex;
   flex-direction: column;
   justify-content: center;

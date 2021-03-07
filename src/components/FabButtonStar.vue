@@ -1,5 +1,5 @@
 <template>
-  <button class="fab-button-star" v-on:click.stop="onClickButton">
+  <button class="fab-button-star bg-secondary" v-on:click.stop="onClickButton">
     <img v-if="isSelected" src="/img/star.svg" alt="search-icon" />
     <img v-else src="/img/star-off.svg" alt="search-icon" />
   </button>
