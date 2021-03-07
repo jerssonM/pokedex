@@ -1,7 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import HomeView from "../views/HomeView";
-import PokemonListView from "../views/PokemonListView";
 
 const routes = [
   {
@@ -12,7 +11,10 @@ const routes = [
   {
     path: "/pokemon-list",
     name: "PokemonList",
-    component: PokemonListView,
+    component: () =>
+      import(
+        /* webpackChunkName: "pokemonList" */ "../views/PokemonListView.vue"
+      ),
   },
 ];
 
