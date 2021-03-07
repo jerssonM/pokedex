@@ -1,7 +1,7 @@
 <template>
   <div class="pokemon-list-view">
     <SearchInput placeholder="Search" :onChange="onChangeSearchInput" />
-    <NonItems v-if="filteredPokemonList.length === 0" />
+    <NonItems v-if="filteredPokemonList.length === 0 && inputText" />
     <PokemonList
       :pokemons="filteredPokemonList"
       :onClick="onClickPokemon"

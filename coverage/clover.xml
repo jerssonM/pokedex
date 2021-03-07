@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1615077416726" clover="3.2.0">
+  <project timestamp="1615077416727" name="All files">
+    <metrics statements="36" coveredstatements="33" conditionals="9" coveredconditionals="5" methods="22" coveredmethods="12" elements="67" coveredelements="50" complexity="0" loc="36" ncloc="36" packages="2" files="8" classes="8"/>
+    <package name="components">
+      <metrics statements="22" coveredstatements="19" conditionals="2" coveredconditionals="1" methods="18" coveredmethods="8"/>
+      <file name="Button.vue" path="/Users/jerssonma/Personal/tech-tests/global-66/src/components/Button.vue">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+      </file>
+      <file name="FabButtonStar.vue" path="/Users/jerssonma/Personal/tech-tests/global-66/src/components/FabButtonStar.vue">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+      </file>
+      <file name="PokemonCard.vue" path="/Users/jerssonma/Personal/tech-tests/global-66/src/components/PokemonCard.vue">
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+      </file>
+      <file name="PokemonItem.vue" path="/Users/jerssonma/Personal/tech-tests/global-66/src/components/PokemonItem.vue">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+      <file name="PokemonList.vue" path="/Users/jerssonma/Personal/tech-tests/global-66/src/components/PokemonList.vue">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+      </file>
+      <file name="SearchInput.vue" path="/Users/jerssonma/Personal/tech-tests/global-66/src/components/SearchInput.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="clipboard.js" path="/Users/jerssonma/Personal/tech-tests/global-66/src/utils/clipboard.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="strings.js" path="/Users/jerssonma/Personal/tech-tests/global-66/src/utils/strings.js">
+        <metrics statements="5" coveredstatements="5" conditionals="7" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="1" count="2" type="cond" truecount="0" falsecount="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="4" falsecount="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

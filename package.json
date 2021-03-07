@@ -1,12 +1,13 @@
 {
   "name": "Pokedex",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint './src/**/*.js'",
-    "test": "jest"
+    "test-with-coverage": "node_modules/.bin/jest --config ./jest.config.js --coverage=true --maxWorkers=2 --silent"
   },
   "dependencies": {
     "@vue/compiler-sfc": "^3.0.7",
@@ -18,17 +19,35 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^2.0.0-0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0-0",
-    "prettier": "^2.2.1"
+    "husky": "4.2.5",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "typescript": "~3.9.3",
+    "vue-jest": "^5.0.0-0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+    "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "yarn test:unit",
+      "yarn test --findRelatedTests",
+      "git add ."
+    ]
+  }
 }
