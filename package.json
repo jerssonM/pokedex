@@ -45,8 +45,8 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "yarn test:unit",
-      "yarn test --findRelatedTests",
+      "yarn test:unit --findRelatedTests",
+      "yarn lint",
       "git add ."
     ]
   }
