@@ -11,7 +11,7 @@
           class="bottom-bar-img-icon"
           alt="all-list"
         />
-        All</Button
+        {{ $t("all") }}</Button
       >
       <Button
         fullWidth
@@ -23,7 +23,7 @@
           class="bottom-bar-img-icon"
           alt="star-white"
         />
-        Favorites</Button
+        {{ $t("favorites") }}</Button
       >
     </div>
   </div>

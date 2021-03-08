@@ -3,6 +3,15 @@ import { mount } from "@vue/test-utils";
 import PokemonList from "../../../src/components/PokemonList";
 
 describe("PokemonList", () => {
+  beforeAll(() => {
+    const intersectionObserverMock = () => ({
+      observe: () => null,
+    });
+    window.IntersectionObserver = jest
+      .fn()
+      .mockImplementation(intersectionObserverMock);
+  });
+
   it("render list items", () => {
     const wrapper = mount(PokemonList, {
       props: { pokemons: [{ name: "Pikachu" }, { name: "Venusaur" }] },

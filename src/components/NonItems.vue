@@ -2,10 +2,10 @@
   <div class="non-items full-width text-bold">
     <h4 class="non-items-title title color-primary">Uh-oh!</h4>
     <p class="non-items-paragraph paragraph-large color-secondary">
-      You look lost on your journey!
+      {{ $t("youLookLost") }}
     </p>
     <router-link to="/">
-      <Button>Go back home</Button>
+      <Button>{{ $t("goBackHome") }}</Button>
     </router-link>
   </div>
 </template>

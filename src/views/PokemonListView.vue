@@ -1,6 +1,9 @@
 <template>
   <div class="pokemon-list-view">
-    <SearchInput placeholder="Search" :onChange="onChangeSearchInput" />
+    <SearchInput
+      :placeholder="searchPlaceholder"
+      :onChange="onChangeSearchInput"
+    />
     <NonItems v-if="filteredPokemonList.length === 0 && inputText" />
     <PokemonList
       :pokemons="filteredPokemonList"
@@ -105,6 +108,9 @@ export default {
     },
     favoritePokemonsNames() {
       return this.favoritesPokemons.map(({ name }) => name);
+    },
+    searchPlaceholder() {
+      return this.$t("search");
     },
   },
   async mounted() {

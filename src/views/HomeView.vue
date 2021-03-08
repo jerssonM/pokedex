@@ -1,13 +1,12 @@
 <template>
   <div class="home-screen">
     <img src="/img/pikachu.svg" class="home-screen-logo" />
-    <h3 class="home-screen-title">Welcome to Pokédex</h3>
+    <h3 class="home-screen-title">{{ $t("welcomePokedex") }}</h3>
     <p class="home-screen-paragraph paragraph">
-      The digital encyclopedia created by Professor Oak is an invaluable tool to
-      Trainers in the Pokémon world.
+      {{ $t("theDigitalEncyclopedia") }}
     </p>
     <router-link to="/pokemon-list">
-      <Button>Get started</Button>
+      <Button>{{ $t("getStarted") }}</Button>
     </router-link>
   </div>
 </template>
