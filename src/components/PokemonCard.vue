@@ -19,22 +19,27 @@
           <li
             class="pokemon-card-list-item paragraph text-capitalize color-secondary"
           >
-            <span class="text-bold">Name:</span> {{ pokemon.name }}
+            <span class="text-bold">{{ $t("name") }}:</span> {{ pokemon.name }}
           </li>
           <li class="pokemon-card-list-item paragraph color-secondary">
-            <span class="text-bold">Weight:</span> {{ pokemon.weight }}
+            <span class="text-bold">{{ $t("weight") }}:</span>
+            {{ pokemon.weight }}
           </li>
           <li class="pokemon-card-list-item paragraph color-secondary">
-            <span class="text-bold">Height:</span> {{ pokemon.height }}
+            <span class="text-bold">{{ $t("height") }}:</span>
+            {{ pokemon.height }}
           </li>
           <li
             class="pokemon-card-list-item paragraph text-capitalize color-secondary"
           >
-            <span class="text-bold">Types:</span> {{ pokemon.types.join(", ") }}
+            <span class="text-bold">{{ $t("types") }}:</span>
+            {{ pokemon.types.join(", ") }}
           </li>
         </ul>
         <div class="pokemon-card-buttons-container">
-          <Button v-on:click="onClickShareButton">Share to my friends</Button>
+          <Button v-on:click="onClickShareButton">{{
+            $t("shareToMyFriends")
+          }}</Button>
           <FabButtonStar
             :onClick="onClickFabIcon"
             :isSelected="isSelectedStar"

@@ -1,12 +1,17 @@
 <template>
   <div class="pokemon-list-view">
-    <SearchInput placeholder="Search" :onChange="onChangeSearchInput" />
+    <SearchInput
+      :placeholder="searchPlaceholder"
+      :onChange="onChangeSearchInput"
+    />
     <NonItems v-if="filteredPokemonList.length === 0 && inputText" />
     <PokemonList
       :pokemons="filteredPokemonList"
       :onClick="onClickPokemon"
       :onClickStar="onClickPokemonStar"
       :favorites="favoritePokemonsNames"
+      :loadMoreData="fetchPokemons"
+      :showLoader="showAll && !inputText"
     />
     <BottomBar :onClick="onClickBottomBar" />
     <PokemonCard
@@ -37,7 +42,9 @@ export default {
       inputText: "",
       pokemons: [],
       showAll: true,
+      countItems: 20,
       isLoading: true,
+      isFetching: false,
       selectedPokemon: null,
       favoritesPokemons: [],
     };
@@ -75,6 +82,20 @@ export default {
         this.isLoading = false;
       }, 500);
     },
+    async fetchPokemons() {
+      if (!this.isFetching && this.showAll && !this.inputText) {
+        this.isFetching = true;
+        const data = await apiRequest(
+          "getAllPokemons",
+          `?offset=${this.countItems - 20}&limit=${this.countItems}`
+        );
+        if (data && !data.error) {
+          this.pokemons = this.pokemons.concat(data);
+          this.countItems += 20;
+        }
+        this.isFetching = false;
+      }
+    },
   },
   computed: {
     filteredPokemonList() {
@@ -88,14 +109,14 @@ export default {
     favoritePokemonsNames() {
       return this.favoritesPokemons.map(({ name }) => name);
     },
+    searchPlaceholder() {
+      return this.$t("search");
+    },
   },
   async mounted() {
-    const data = await apiRequest("getAllPokemons");
-    if (data && !data.error) {
-      this.pokemons = data;
-    }
-    this.disableLoadingScreen();
+    this.fetchPokemons();
     this.favoritesPokemons = getStore();
+    this.disableLoadingScreen();
   },
 };
 </script>
